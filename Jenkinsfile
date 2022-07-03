@@ -1,16 +1,15 @@
 pipeline{
     agent any
 
-    stages{
-        stage('Build'){
-            steps{
-                sh 'mvn clean install -DskipTests'
+    stages {
+        stage('Build') {
+            steps {
+                // One or more steps need to be included within the steps block.
             }
-        }post{
-            success{
-                archiveArtifacts artifacts: '**/target/*.war'
-            }
+
+
         }
 
     }
+
 }
