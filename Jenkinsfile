@@ -4,10 +4,20 @@ pipeline{
     stages {
         stage('Build') {
             steps {
-                sh 'echo hello2'
+                sh 'mvn clean install -DskipTests'
+
             }
 
 
+        }post{
+            success{
+                archiveArtifcats artifacts: '**/target/*.war'
+            }
+        }
+        stage('Test'){
+            steps{
+                sh 'mvn test'
+            }
         }
 
     }
