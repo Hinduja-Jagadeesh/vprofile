@@ -14,11 +14,6 @@ pipeline{
                 archiveArtifcats artifacts: '**/target/*.war'
             }
         }
-        stage('Test'){
-            steps{
-                sh 'mvn test'
-            }
-        }
 
     }
 
