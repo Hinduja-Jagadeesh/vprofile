@@ -11,6 +11,12 @@ pipeline{
 
                         }
 
+    }post{
+        success{
+            sh 'echo good work'
         }
+        
+    }
+    
 
 }
