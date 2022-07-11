@@ -9,12 +9,8 @@ pipeline{
             }
 
 
-        }post{
-            success{
-                archiveArtifcats artifacts: '**/target/*.war'
-            }
-        }
+                        }
 
-    }
+        }
 
 }
